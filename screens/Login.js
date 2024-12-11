@@ -70,7 +70,7 @@ const Login = () => {
           }}
         >
           <Image
-            source={require("../assets/email.png")}
+            source={require("../assets/Email.png")}
             style={{
               width: 34,
               height: 34,
@@ -110,8 +110,8 @@ const Login = () => {
             <Image
               source={
                 showPassword
-                  ? require("../assets/lock.png") 
-                  : require("../assets/lock.png") 
+                  ? require("../assets/padlock.png") 
+                  : require("../assets/padlock.png") 
               }
               style={{
                 width: 34,

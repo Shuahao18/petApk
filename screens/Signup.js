@@ -41,11 +41,14 @@ const Signup = () => {
 
       <View
         style={{
-          flex: 1,
-          width: '100%',
+          position: 'absolute',
+          top: 252,
+          width: '90%',
+          height: 100,
           justifyContent: "center",
           alignItems: "center",
           bottom: 140,
+        
         }}
       >
         <Image
@@ -85,7 +88,7 @@ const Signup = () => {
           }}
         >
           <Image
-            source={require("../assets/email.png")}
+            source={require("../assets/Email.png")}
             style={{
               width: 34,
               height: 34,
@@ -125,8 +128,8 @@ const Signup = () => {
             <Image
               source={
                 showPassword
-                  ? require("../assets/lock.png")
-                  : require("../assets/lock.png")
+                  ? require("../assets/padlock.png")
+                  : require("../assets/padlock.png")
               }
               style={{
                 width: 34,
@@ -169,8 +172,8 @@ const Signup = () => {
             <Image
               source={
                 showPassword
-                  ? require("../assets/lock.png")
-                  : require("../assets/lock.png")
+                  ? require("../assets/padlock.png")
+                  : require("../assets/padlock.png")
               }
               style={{
                 width: 34,

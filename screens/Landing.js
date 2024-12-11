@@ -11,6 +11,24 @@ const Landing = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigation = useNavigation();
   const slideAnim = useRef(new Animated.Value(0)).current;
+  const bounceAnim = useRef(new Animated.Value(0)).current; 
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(bounceAnim, {
+          toValue: -4, 
+          duration: 3000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(bounceAnim, {
+          toValue: 0, 
+          duration: 500,
+          useNativeDriver: true,
+        }),
+      ])
+    ).start();
+  }, [bounceAnim]);
+
   return (
     <View
       style={{
@@ -24,23 +42,30 @@ const Landing = () => {
         backgroundColor: colors.bg,
       }}
     >
-      <View style = {{position: 'absolute',width: '100%' ,justifyContent: 'center', alignItems: 'flex-end', top: 100}}>
-      <Text style={{ fontFamily: 'SixtyFour',fontSize: 40, color: colors.text, }}>PAWFECT FEEDER</Text>
-      <Text style={{ fontSize: 12,fontWeight: 900, color: colors.text, left: -100}}>
+      <View style = {{ flexDirection: 'col', width: '100%', height: 100, justifyContent: 'center', alignItems: 'center', }}>
+      
+      <Animated.Image
+        source={require("../assets/pawpaw.png")}
+        style={{
+          width: 40,
+          height: 40,
+          transform: [{ translateY: bounceAnim }],
+          top: 40,
+          right: 70
+
+        }}
+      />
+
+      <Text style={{ fontFamily: 'SixtyFour',fontSize: 40, color: colors.text,}}>P WFECT</Text>
+      <Text style={{ fontFamily: 'SixtyFour',fontSize: 40, color: colors.text,}}>FEEDER</Text>
+      <Text style={{ fontSize: 12, fontWeight: 900, color: colors.text}}>
         Pet feeder for dog and cats only
       </Text>
+      </View>
+    
 
-    </View>
-
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          top: 29,
-        }}
-      >
+     
+        <View style = {{position: 'absolute', width: '100%', height: 120, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', bottom: 267 }}>
         <Image
           source={require("../assets/cat.png")}
           style={{
@@ -59,6 +84,7 @@ const Landing = () => {
           }}
         />
       </View>
+
 
       <View
         style={{
@@ -90,7 +116,7 @@ const Landing = () => {
           onPress={() => navigation.navigate("login")}
         >
           <Image
-            source={require("../assets/forward.png")}
+            source={require("../assets/Vectors.png")}
             style={{
               width: 50,
               height: 50,

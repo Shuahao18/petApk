@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Animated, StyleSheet, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; 
+import colors from '../constants/colors';
 
 const screenWidth = Dimensions.get('window').width;
 const boxSize = 20; 
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
   box: {
     width: boxSize,
     height: boxSize,
-    backgroundColor: '#d68300',
+    backgroundColor: colors.punkan,
     marginRight: 6,
     marginBottom: 6,
     borderRadius: 5,

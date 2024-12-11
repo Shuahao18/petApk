@@ -1,6 +1,6 @@
 import { ImageBackground, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Animated, Image } from "react-native";
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigation } from "@react-navigation/native"; // for navigation
+import { useNavigation } from "@react-navigation/native"; 
 import colors from "../constants/colors";
 
 const Home = () => {
@@ -24,14 +24,13 @@ const Home = () => {
     ).start();
   }, [bounceAnim]);
 
-  // Function to navigate to About Us screen
   const navigateToAbout = () => {
-    navigation.navigate('About'); // Replace 'About' with your screen name
+    navigation.navigate('About'); 
   };
 
-  // Function to navigate to Home screen (you can navigate to any screen you'd like)
+
   const navigateToHome = () => {
-    navigation.navigate('Home'); // Replace 'Home' with your screen name
+    navigation.navigate('Home'); 
   };
 
   return (
@@ -57,13 +56,13 @@ const Home = () => {
         }}
       />
 
-      <Text style={{ fontSize: 65, fontWeight: "900", color: colors.text }}>
+      <Text style={{ fontSize: 65, fontFamily: 'PoetSen', color: colors.text }}>
         Feeding
       </Text>
       <Text
         style={{
           fontSize: 48,
-          fontWeight: "900",
+          fontFamily: 'PoetSen',
           color: colors.bg,
           backgroundColor: colors.punkan,
         }}
@@ -135,112 +134,114 @@ const Home = () => {
         </TouchableOpacity>
 
         <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
-            height: 100,
-            bottom: -20,
-          }}
-        >
-          {/* About Us Button */}
-          <TouchableOpacity
-            style={{
-              flexDirection: "col",
-              justifyContent: "center",
-              width: 50,
-              height: 60,
-            }}
-            onPress={() => navigation.navigate('about')}
-            >
-            <Image
-              source={require("../assets/aboutBtn.png")}
               style={{
-                alignSelf: "center",
-                justifySelf: "center",
-                top: 2,
-                width: 40,
-                height: 40,
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "100%",
+                height: 120,
+                bottom: -20,
+                top: 50,
+                paddingHorizontal: 30,
               }}
-            />
-            <Text
-              style={{
-                color: colors.punkan,
-                fontSize: 12,
-                fontWeight: "900",
-                marginTop: 5,
-                left: 3,
-              }}
-            >
-              About Us
-            </Text>
-          </TouchableOpacity>
-
-          {/* Home Button */}
-          <TouchableOpacity
-            style={{
-              flexDirection: "col",
-              justifyContent: "center",
-              width: 50,
-              height: 60,
-            }}
-            onPress={() => navigation.navigate('home')}
-            >
-            <Image
-              source={require("../assets/homebtn.png")}
-              style={{
-                alignSelf: "center",
-                justifySelf: "center",
-                top: 2,
-                width: 40,
-                height: 40,
-              }}
-            />
-            <Text
-              style={{
-                color: colors.text,
-                fontSize: 12,
-                fontWeight: "900",
-                marginTop: 5,
-                left: 10,
-              }}
-            >
-              Home
-            </Text>
-          </TouchableOpacity>
-
-          <View
-            style={{
-              flexDirection: "col",
-              justifyContent: "center",
-              width: 50,
-              height: 60,
-            }}
-          >
-            <Image
-              source={require("../assets/Logout.png")}
-              style={{
-                alignSelf: "center",
-                justifySelf: "center",
-                top: 2,
-                width: 40,
-                height: 40,
-              }}
-            />
-            <Text
-              style={{
-                color: colors.punkan,
-                fontSize: 12,
-                fontWeight: "900",
-                marginTop: 5,
-                left: 3,
-              }}
-            >
-              Log Out
-            </Text>
-          </View>
+                >           
+              {/* About Us Button */}
+              <TouchableOpacity
+                style={{
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: 50,
+                  height: 70,
+                }}
+                onPress={() => navigation.navigate('about')}
+              >
+                <Image
+                  source={require("../assets/aboutBtn.png")}
+                  style={{
+                    width: 30,
+                    height: 30,
+                    resizeMode: "contain", 
+                  }}
+             />
+             <Text
+               style={{
+                 color: colors.punkan,
+                 fontSize: 12,
+                 fontWeight: "900",
+                 marginTop: 5,
+                 textAlign: "center",
+               }}
+             >
+               About
+             </Text>
+           </TouchableOpacity>
+             
+           {/* Home Button */}
+           <TouchableOpacity
+             style={{
+               flexDirection: "column",
+               justifyContent: "center",
+               alignItems: "center", 
+               width: 50,
+               height: 70, 
+             }}
+             onPress={() => navigation.navigate('home')}
+           >
+             <Image
+               source={require("../assets/homebtn.png")}
+               style={{
+                 width: 30, 
+                 height: 30,
+                 resizeMode: "contain", 
+               }}
+             />
+             <Text
+               style={{
+                 color: colors.text,
+                 fontSize: 12,
+                 fontWeight: "900",
+                 marginTop: 5,
+                 textAlign: "center", 
+               }}
+             >
+               Home
+             </Text>
+           </TouchableOpacity>
+             
+           {/* Log Out Button */}
+           <TouchableOpacity
+             style={{
+               flexDirection: "column",
+               justifyContent: "center",
+               alignItems: "center", 
+               width: 50,
+               height: 70, 
+             }}
+             onPress={() => console.log('Log Out pressed')} 
+           >
+             <Image
+               source={require("../assets/Logout.png")}
+               style={{
+                 width: 30, 
+                 height: 30,
+                 resizeMode: "contain", 
+               }}
+             />
+             <Text
+               style={{
+                 color: colors.punkan,
+                 fontSize: 12,
+                 fontWeight: "900",
+                 marginTop: 5,
+                 textAlign: "center", 
+               }}
+             >
+               Log Out
+             </Text>
+           </TouchableOpacity>
+             
         </View>
       </View>
     </View>

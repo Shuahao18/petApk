@@ -15,11 +15,13 @@ import { appLoading } from "expo";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  // Load the LazyDog font
   let [fontsLoaded] = useFonts({
     LazyDog: require("./assets/fonts/Lazydog.otf"),
     Nunito: require("./assets/fonts/NunitoSans.ttf"),
-    SixtyFour: require("./assets/fonts/Sixtyfour.ttf")
+    SixtyFour: require("./assets/fonts/Sixtyfour.ttf"),
+    PoetSen: require("./assets/fonts/PoetsenOne-Regular.ttf"),
+    PopBold: require("./assets/fonts/Poppins-SemiBold.ttf")
+
   });
 
   if (!fontsLoaded) {
@@ -34,8 +36,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="banter" component={BanterLoader} />
-      <Stack.Screen name="landing" component={Landing} />
       <Stack.Screen name="signup" component={Signup} />
+      <Stack.Screen name="landing" component={Landing} />
       <Stack.Screen name="login" component={Login} />
       <Stack.Screen name="home" component={Home} />
       <Stack.Screen name="about" component={About}/>

@@ -4,7 +4,6 @@ import React, {useEffect, useState, useRef } from "react";
 import { useNavigation } from "@react-navigation/native"; 
 import colors from "../constants/colors";
 import { toggleVisibility, toggleVisibilityRight } from "../components/animation"; 
-
 const About = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isVisibleRight, setIsVisibleRight] = useState(true);
@@ -24,7 +23,7 @@ const About = () => {
         }),
         Animated.timing(translateAnimRight, {
           toValue: 0, 
-          duration: 3000,
+          duration: 2000,
           useNativeDriver: true,
         }),
       ]).start(); 
@@ -83,29 +82,29 @@ const About = () => {
               onPress={() => navigation.navigate('home')}
               />
           </TouchableOpacity>
-          <Text style={{ fontSize: 65, fontWeight: 900, color: colors.text, top: -80 }}>About</Text>
+          <Text style={{ fontSize: 65, fontFamily: "PoetSen" , color: colors.punkan, top: -80 }}>About</Text>
         </View>
 
         {/* Description Section */}
         <View style={{ width: "95%", height: 300, marginBottom: 30, justifyContent: 'center', alignItems: "center",backgroundColor: colors.bg,borderRadius: 12, borderWidth: 2, borderColor: colors.punkan
   }}>
-        <Text style={{ fontSize: 12 }}><Text style={{  }}></Text>At Pawfect Feeder, we are passionate about enhancing the well-</Text>
-        <Text style={{ fontSize: 12 }}>being of your beloved pets, ensuring they receive the utmost care </Text>
-        <Text style={{ fontSize: 12 }}>even in your absence. Our innovative smart feeding system is </Text>
-        <Text style={{ fontSize: 12 }}>thoughtfully designed to provide a seamless and reliable way to keep</Text>
-        <Text style={{ fontSize: 12 }}>your furry friends nourished and content.{'\n'}</Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}><Text style={{  }}></Text>At Pawfect Feeder, we are passionate about enhancing the well-</Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}>being of your beloved pets, ensuring they receive the utmost care </Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}>even in your absence. Our innovative smart feeding system is </Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}>thoughtfully designed to provide a seamless and reliable way to keep</Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}>your furry friends nourished and content.{'\n'}</Text>
 
-        <Text style={{ fontSize: 12}}>With user-friendly features and a focus on both convenience and </Text>
+        <Text style={{ fontSize: 12, color: colors.text, fontWeight: 800}}>With user-friendly features and a focus on both convenience and </Text>
         
-        <Text style={{ fontSize: 12}}>affection, Pawfect Feeder stands as your trusted partner in creating a</Text>
-        <Text style={{ fontSize: 12}}>delivered straight to your door with Just a</Text>
-        <Text style={{ fontSize: 12}}>balanced and fulfilling life for your pets. {'\n'} </Text>
-
-        <Text style={{ fontSize: 12}}>Pawfect Feeder offers an innovative, dependable, and user-friendly </Text>
-        <Text style={{ fontSize: 12 }}>feeding solution designed to keep your pets nourished and content, </Text>
-        <Text style={{ fontSize: 12 }}>even in your absence. Our goal is to ensure that your furry </Text>
-        <Text style={{ fontSize: 12 }}>companions receive their meals on time and maintain their well-</Text>
-        <Text style={{ fontSize: 12 }}>being, giving you peace of mind while you're away.</Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>affection, Pawfect Feeder stands as your trusted partner in creating a</Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>delivered straight to your door with Just a</Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>balanced and fulfilling life for your pets. {'\n'} </Text>
+  
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>Pawfect Feeder offers an innovative, dependable, and user-friendly </Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>feeding solution designed to keep your pets nourished and content, </Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>even in your absence. Our goal is to ensure that your furry </Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>companions receive their meals on time and maintain their well-</Text>
+        <Text style={{  fontSize: 12, color: colors.text, fontWeight: 800}}>being, giving you peace of mind while you're away.</Text>
        
 
       </View>
@@ -133,7 +132,7 @@ const About = () => {
               onPress={() => toggleVisibility(translateAnim, isVisible, setIsVisible)} 
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/domgy.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -193,7 +192,7 @@ const About = () => {
               onPress={() => toggleVisibilityRight(translateAnimRight, isVisibleRight, setIsVisibleRight, )} 
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/jess.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -316,7 +315,7 @@ const About = () => {
               onPress={() => toggleVisibilityRight(translateAnimRight, isVisibleRight, setIsVisibleRight)} 
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/lenard.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -379,7 +378,7 @@ const About = () => {
               onPress={() => toggleVisibility(translateAnim, isVisible, setIsVisible)} 
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/janella.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -442,7 +441,7 @@ const About = () => {
               onPress={() => toggleVisibilityRight(translateAnimRight, isVisibleRight, setIsVisibleRight)} 
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/joshua.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -506,7 +505,7 @@ const About = () => {
               onPress={() => toggleVisibility(translateAnim, isVisible, setIsVisible)} // Use the imported animation function
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/mae.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -569,7 +568,7 @@ const About = () => {
               onPress={() => toggleVisibilityRight(translateAnimRight, isVisibleRight, setIsVisibleRight)} // Use the imported animation function
             >
               <Image
-                source={require("../assets/kris.png")}
+                source={require("../assets/nia.png")}
                 style={{
                   position: "absolute",
                   width: 140,
@@ -616,114 +615,115 @@ const About = () => {
 
       {/* Footer Section with Buttons */}
       <View
+  style={{
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    height: 120,
+    bottom: -15,
+    paddingHorizontal: 30,
+  }}
+>
+  {/* About Us Button */}
+  <TouchableOpacity
+    style={{
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      width: 50,
+      height: 70,
+    }}
+    onPress={() => navigation.navigate('about')}
+  >
+    <Image
+      source={require("../assets/abtBtn.png")}
       style={{
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingHorizontal: 20,
-        width: "100%",
-        height: 100,
+        width: 30,
+        height: 30,
+        bottom: -4,
+        resizeMode: "contain",
+      }}
+    />
+    <Text
+      style={{
+        color: colors.text,
+        fontSize: 12,
+        fontWeight: "900",
+        marginTop: 5,
+        textAlign: "center",
       }}
     >
-      {/* About Us Button */}
-      <TouchableOpacity
-        style={{
-          flexDirection: "col",
-          justifyContent: "center",
-          width: 50,
-          height: 60,
-        }}
-        onPress={() => navigation.navigate('about')}
-      >
-        <Image
-          source={require("../assets/aboutBtn.png")}
-          style={{
-            alignSelf: "center",
-            justifySelf: "center",
-            top: 2,
-            width: 40,
-            height: 40,
-          }}
-        />
-        <Text
-          style={{
-            color: colors.punkan,
-            fontSize: 12,
-            fontWeight: "900",
-            marginTop: 5,
-            left: 3,
-          }}
-        >
-          About Us
-        </Text>
-      </TouchableOpacity>
+      About
+    </Text>
+  </TouchableOpacity>
 
-      {/* Home Button */}
-      <TouchableOpacity
-        style={{
-          flexDirection: "col",
-          justifyContent: "center",
-          width: 50,
-          height: 60,
-        }}
-        onPress={() => navigation.navigate('home')}
-      >
-        <Image
-          source={require("../assets/homebtn.png")}
-          style={{
-            alignSelf: "center",
-            justifySelf: "center",
-            top: 2,
-            width: 40,
-            height: 40,
-          }}
-        />
-        <Text
-          style={{
-            color: colors.text,
-            fontSize: 12,
-            fontWeight: "900",
-            marginTop: 5,
-            left: 10,
-          }}
-        >
-          Home
-        </Text>
-      </TouchableOpacity>
+  {/* Home Button */}
+  <TouchableOpacity
+    style={{
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center", 
+      width: 50,
+      height: 70, 
+    }}
+    onPress={() => navigation.navigate('home')}
+  >
+    <Image
+      source={require("../assets/hBtn.png")}
+      style={{
+        width: 30, 
+        height: 30,
+        resizeMode: "contain", 
+      }}
+    />
+    <Text
+      style={{
+        color: colors.punkan,
+        fontSize: 12,
+        fontWeight: "900",
+        marginTop: 5,
+        textAlign: "center", 
+      }}
+    >
+      Home
+    </Text>
+  </TouchableOpacity>
 
-      {/* Log Out Button */}
-      <TouchableOpacity
-        style={{
-          flexDirection: "col",
-          justifyContent: "center",
-          width: 50,
-          height: 60,
-        }}
-        onPress={''} // Call handleLogout on press
-      >
-        <Image
-          source={require("../assets/Logout.png")}
-          style={{
-            alignSelf: "center",
-            justifySelf: "center",
-            top: 2,
-            width: 40,
-            height: 40,
-          }}
-        />
-        <Text
-          style={{
-            color: colors.punkan,
-            fontSize: 12,
-            fontWeight: "900",
-            marginTop: 5,
-            left: 3,
-          }}
-        >
-          Log Out
-        </Text>
-      </TouchableOpacity>
-      </View>
+  {/* Log Out Button */}
+  <TouchableOpacity
+    style={{
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center", 
+      width: 50,
+      height: 70, 
+    }}
+    onPress={() => console.log('Log Out pressed')} 
+  >
+    <Image
+      source={require("../assets/Logout.png")}
+      style={{
+        width: 30, 
+        height: 30,
+        resizeMode: "contain", 
+      }}
+    />
+    <Text
+      style={{
+        color: colors.punkan,
+        fontSize: 12,
+        fontWeight: "900",
+        marginTop: 5,
+        textAlign: "center", 
+      }}
+    >
+      Log Out
+    </Text>
+  </TouchableOpacity>
+</View>
+
     </ScrollView>
   );
 };
